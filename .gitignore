@@ -1,0 +1,17 @@
+# Python
+venv/
+.venv/
+Backend/__pycache__/
+Backend/uploads/
+
+# Environment Variables
+Backend/.env
+Frontend/.env.local
+# Node
+Frontend/node_modules/
+
+# VS Code
+.vscode/
+
+# Python cache
+*.pyc
