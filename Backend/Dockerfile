@@ -1,9 +1,10 @@
-FROM python:3.11-slim-bookworm
+FROM python:3.11
 
 WORKDIR /app
 RUN apt-get update && apt-get install -y \
-    libg1-mesa-glx\
-    libglib2.0-0 \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . .
