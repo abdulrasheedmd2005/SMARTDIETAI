@@ -4,7 +4,7 @@ python-multipart
 opencv-python
 numpy==1.26.4
 matplotlib
-paddlepaddle==2.6.2
+paddlepaddle
 paddleocr==2.7.3
 requests
 python-dotenv
