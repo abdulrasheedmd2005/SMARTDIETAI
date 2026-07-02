@@ -75,7 +75,7 @@ const processImage = useCallback(async (file: File) => {
     formData.append("file", file)
 
     const response = await fetch(
-      "http://localhost:8000/analyze",
+      "https://smartdietai-production.up.railway.app/analyze",
       {
         method: "POST",
         body: formData
