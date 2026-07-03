@@ -37,7 +37,7 @@ def enhance_for_ocr(image):
     return image
 
 ocr = PaddleOCR(
-    use_angle_cls=True,
+    use_angle_cls=False,
     lang="en"
 )
 
