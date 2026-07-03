@@ -100,7 +100,7 @@ def rotation_ocr(image):
 
 def scale_ocr(image):
 
-    scales = [1, 2]
+    scales = [1]
 
     results = []
 
