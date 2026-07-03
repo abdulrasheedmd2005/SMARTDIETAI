@@ -1,5 +1,5 @@
 from pydoc import text
-
+import gc
 import cv2
 import re
 
@@ -145,6 +145,7 @@ def process_image(image_path):
         )
 
         text = run_ocr(crop)
+        del crop
 
         cls = pred["class"].lower()
 
@@ -202,6 +203,10 @@ def process_image(image_path):
     # =========================
     # FINAL RESPONSE
     # =========================
+    del image
+    del predictions
+    gc.collect()
+
     return {
         "nutrition": nutrition_data,
         "warnings": warnings,

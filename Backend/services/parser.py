@@ -1,7 +1,7 @@
 import re
 import warnings
 
-from matplotlib import text
+
 
 def extract_value(pattern, text):
 

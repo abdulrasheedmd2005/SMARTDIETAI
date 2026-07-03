@@ -38,7 +38,10 @@ async def analyze_food(file: UploadFile = File(...)):
             file.file,
             buffer
         )
-
-    result = process_image(file_path)
+    try:
+        result = process_image(file_path)
+    finally:
+        if os.path.exists(file_path):
+            os.remove(file_path)
 
     return result
